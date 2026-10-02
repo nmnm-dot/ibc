@@ -1,4 +1,5 @@
 import { initializeApp } from "https://gstatic.com";
+import { initializeApp } from "https://gstatic.com";
 import {
   getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword,
   signOut, onAuthStateChanged, updateProfile, deleteUser,
