@@ -1,14 +1,14 @@
-import { initializeApp } from "https://gstatic.com";
-import { initializeApp } from "https://gstatic.com";
+
+import { initializeApp } from "https://firebase-app.js";
 import {
   getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword,
   signOut, onAuthStateChanged, updateProfile, deleteUser,
-} from "https://gstatic.com";
+} from "https://firebase-auth.js";
 import {
   getFirestore, doc, setDoc, getDoc, collection, addDoc, query, where,
   orderBy, onSnapshot, serverTimestamp, updateDoc, deleteDoc, limit,
   arrayUnion, increment, writeBatch, getDocs,
-} from "https://gstatic.com";
+} from "https://firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAT4-O3Wqay8WU1PdnZN_ugbdzDc5Bo6ro",
