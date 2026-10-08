@@ -1,3 +1,44 @@
+// ===== Debug Errors على الموبايل =====
+window.onerror = function (msg, url, line, col, error) {
+  const box = document.createElement("div");
+  box.style.cssText = `
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #c62828;
+    color: white;
+    padding: 14px;
+    font-size: 13px;
+    z-index: 999999;
+    direction: rtl;
+    max-height: 45vh;
+    overflow: auto;
+    white-space: pre-wrap;
+    font-family: monospace;
+  `;
+  box.textContent = `خطأ:\n${msg}\n\nالسطر: ${line}\nالملف: ${url}`;
+  document.body.appendChild(box);
+  return false;
+};
+
+window.addEventListener("unhandledrejection", function (e) {
+  const box = document.createElement("div");
+  box.style.cssText = `
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #b71c1c;
+    color: white;
+    padding: 14px;
+    font-size: 13px;
+    z-index: 999999;
+    direction: rtl;
+  `;
+  box.textContent = `Promise Error:\n${e.reason}`;
+  document.body.appendChild(box);
+};
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
 import {
   getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword,
