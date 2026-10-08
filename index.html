@@ -181,6 +181,16 @@
 
   <div id="toast" class="toast hidden"></div>
 
+  
   <script type="module" src="js/app.js"></script>
+  <script>
+  // اختبار سريع
+  alert("الـ JS شغال ✅");
+
+  document.getElementById("login-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("تم منع الـ Refresh");
+  });
+  </script>
 </body>
 </html>
